@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Página Menu</title>
+    <link rel="stylesheet" href="micss.css">
+
+</head>
+
+<body>
+    
+    <div class="navigation">
+        <!-- Cabecera del Menu -->
+        <div class="toggle"><span></span></div>
+
+        <!-- Elementos del Menu -->
+        <ul>
+            <li><a href="#brave1">Brave Browser 1</a></li>
+            <li><a href="#brave2">Brave Browser 2</a></li>
+            <li><a href="#brave3">Brave Software</a></li>
+            <li><a href="#brave4">BAT token</a></li>
+        </ul>
+    </div>
+
+    <section id="brave1"><h2>Brave Browser 1</h2></section>
+    <section id="brave2"><h2>Brave Browser 2</h2></section>
+    <section id="brave3"><h2>Brave Software</h2></section>
+    <section id="brave4"><h2>BAT token</h2></section>
+    
+
+    <script>
+        const navigation = document.querySelector('.navigation');
+
+        document.querySelector('.toggle').onclick = function() {
+            this.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+
+</html>
+
+

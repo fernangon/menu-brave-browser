@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+
+    scroll-behavior: smooth;
+}
+
+/* --------------------------------------------------------------------- */
+.navigation {
+    position: fixed;
+    top: 50px;
+    left: 150px;
+
+    width: 250px;
+    height: 50px; /* ------------------------------------------------------------------------------------------------> (1) */
+
+    /* background: #2196f3; */
+
+    /* De momento oculta los elementos del menu. */
+    overflow: hidden;
+
+    z-index: 1000;
+
+    transition: .5s;
+}
+
+/*  Cuando tiene clase "active" es que se ha pulsado el menú y hay que mostrarlo.
+    Entonces se modifica el height de ".navigation" para ahora sí mostrar los elementos del menu. 
+*/
+.navigation.active {
+    height: 350px; /* <---------------------------------------------------------------------------------------------- (1) */
+}
+
+
+.navigation .toggle {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    position: relative;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 50px;
+
+    padding: 0 20px;
+
+    font-size: 20px;
+
+    background: chocolate;
+    color: lightgreen;
+
+    cursor: pointer;
+}
+
+.navigation .toggle::before {
+    content: 'Menu';
+
+    margin-right: 10px;
+}
+
+.navigation .toggle.active::before {
+    content: 'Close';
+
+    margin-right: 10px;
+}
+/* --------------------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------------- */
+/* Contenedor de las rayas */
+.navigation .toggle span {
+    position: relative;
+
+    width: 20px;
+    height: 50px;
+}
+
+/* Raya arriba horizontal */
+.navigation .toggle span::before { 
+    content: '';
+    
+    position: absolute;
+    top: 20px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: #fff;
+
+    transition: .5s;
+}
+
+/* Raya abajo horizontal */
+.navigation .toggle span::after { 
+    content: '';
+    
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: #fff;
+
+    transition: .5s;
+}
+
+/* Raya arriba para formar la X */
+.navigation .toggle.active span::before {
+    top: 24px;
+
+    transform: rotate(225deg);
+}
+
+/* Raya abajo para formar la X */
+.navigation .toggle.active span::after {
+    bottom: 24px;
+
+    transform: rotate(135deg);
+}
+/* --------------------------------------------------------------------- */
+
+/* Elementos del Menu */
+
+.navigation ul {
+    position: relative;
+
+    background: maroon;
+}
+
+.navigation ul li {
+    list-style: none;
+}
+
+.navigation ul li a {
+    display: block;
+
+    position: relative;
+
+    height: 50px;
+
+    padding: 10px 20px;
+
+    font-size: 18px;
+    text-decoration: none;
+
+    color: lime;
+
+    transition: 1s;
+}
+
+.navigation ul li a:hover {
+    background: deeppink;
+
+    transition: 0s;
+}
+/* --------------------------------------------------------------------- */
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #e3f2fd;
+}
+
+section h2 {
+    font-size: 12vh;
+
+    color: rgba(33, 150, 243, .2);
+}
+
+#brave1 {
+    background-image: url("1.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#brave2 {
+    background-image: url("2.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#brave3 {
+    background-image: url("3.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#brave4 {
+    background-image: url("4.png");
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
